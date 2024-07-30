@@ -1,0 +1,27 @@
+{
+	"name": "learning-weaviate",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/opt/motiong/code",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					}
+				},
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+			]
+		}
+	},
+	"postCreateCommand": "poetry install --with dev",
+	"remoteUser": "motiong"
+}
+
